@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "graphql": "ts-node --project tsconfig.json graphql/graphql-server.ts",
+    "all": "concurrently 'next dev' 'ts-node --project tsconfig.json graphql/graphql-server.ts'"
   },
   "dependencies": {
     "@apollo/client": "^3.7.10",
@@ -21,7 +23,9 @@
     "graphql": "^16.6.0",
     "graphql-request": "^5.2.0",
     "mysql": "^2.18.1",
+    "mysql2": "^3.2.3",
     "next": "13.2.4",
+    "pm2": "^5.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "ts-deepmerge": "^6.0.3",
@@ -30,6 +34,9 @@
   "devDependencies": {
     "@types/mysql": "^2.15.21",
     "@types/styled-components": "^5.1.26",
-    "styled-components": "^5.3.9"
+    "apollo-server-express": "^3.12.0",
+    "dotenv": "^16.0.3",
+    "styled-components": "^5.3.9",
+    "ts-node": "^10.9.1"
   }
 }
